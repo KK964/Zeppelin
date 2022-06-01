@@ -38,6 +38,7 @@ import { PhishermanPlugin } from "./Phisherman/PhishermanPlugin";
 import { InternalPosterPlugin } from "./InternalPoster/InternalPosterPlugin";
 import { RoleManagerPlugin } from "./RoleManager/RoleManagerPlugin";
 import { RoleButtonsPlugin } from "./RoleButtons/RoleButtonsPlugin";
+import { SocialMediaPosterPlugin } from "./SocialMediaPoster/SocialMediaPosterPlugin";
 
 // prettier-ignore
 export const guildPlugins: Array<ZeppelinGuildPluginBlueprint<any>> = [
@@ -77,6 +78,7 @@ export const guildPlugins: Array<ZeppelinGuildPluginBlueprint<any>> = [
   InternalPosterPlugin,
   RoleManagerPlugin,
   RoleButtonsPlugin,
+  SocialMediaPosterPlugin,
 ];
 
 // prettier-ignore
