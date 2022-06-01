@@ -39,6 +39,7 @@ import { InternalPosterPlugin } from "./InternalPoster/InternalPosterPlugin";
 import { RoleManagerPlugin } from "./RoleManager/RoleManagerPlugin";
 import { RoleButtonsPlugin } from "./RoleButtons/RoleButtonsPlugin";
 import { SocialMediaPosterPlugin } from "./SocialMediaPoster/SocialMediaPosterPlugin";
+import { ActivitiesPlugin } from "./Activities/ActivitiesPlugin";
 
 // prettier-ignore
 export const guildPlugins: Array<ZeppelinGuildPluginBlueprint<any>> = [
@@ -79,6 +80,7 @@ export const guildPlugins: Array<ZeppelinGuildPluginBlueprint<any>> = [
   RoleManagerPlugin,
   RoleButtonsPlugin,
   SocialMediaPosterPlugin,
+  ActivitiesPlugin,
 ];
 
 // prettier-ignore
