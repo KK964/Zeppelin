@@ -2,7 +2,7 @@ import { Message, MessageOptions, NewsChannel, TextChannel, WebhookClient } from
 import { GuildPluginData } from "knub";
 import { InternalPosterPluginType } from "../types";
 import { getOrCreateWebhookForChannel } from "./getOrCreateWebhookForChannel";
-import { APIMessage } from "discord-api-types";
+import { APIMessage } from "discord-api-types/v9";
 import { isDiscordAPIError } from "../../../utils";
 import { getOrCreateWebhookClientForChannel } from "./getOrCreateWebhookClientForChannel";
 
