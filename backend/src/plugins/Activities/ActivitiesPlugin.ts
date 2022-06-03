@@ -6,7 +6,9 @@ import { ActivitiesPluginType, ConfigSchema } from "./types";
 
 const defaultOptions: PluginOptions<ActivitiesPluginType> = {
   config: {
-    start_activities: false
+    start_activities: false,
+    invite_expire_time: '1h',
+    temporary_membership: true,
   },
   overrides: [
     {

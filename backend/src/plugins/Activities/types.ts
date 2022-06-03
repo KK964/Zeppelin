@@ -3,6 +3,8 @@ import { BasePluginType, typedGuildCommand } from "knub";
 
 export const ConfigSchema = t.type({
   start_activities: t.boolean,
+  invite_expire_time: t.string,
+  temporary_membership: t.boolean
 });
 export type TConfigSchema = t.TypeOf<typeof ConfigSchema>;
 

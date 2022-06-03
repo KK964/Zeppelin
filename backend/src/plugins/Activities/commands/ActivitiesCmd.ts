@@ -4,6 +4,9 @@ import { sendErrorMessage } from "src/pluginUtils";
 
 import { RESTPostAPIChannelInviteJSONBody, APIInvite, InviteTargetType, RouteBases, Routes } from 'discord-api-types/v9';
 import fetch from "node-fetch";
+import { convertDelayStringToMS } from "src/utils";
+
+const INVITE_AGE = 60 * 60 * 24;
 
 export const activities = {
   poker: '755827207812677713',
@@ -45,6 +48,13 @@ export const ActivitiesCmd = activitiesCmd({
       return;
     }
 
+    const config = pluginData.config.get();
+    const expiresTime = config.invite_expire_time ?? pluginData._pluginType.config.invite_expire_time;
+    let pollPeriod = convertDelayStringToMS(expiresTime) ?? convertDelayStringToMS(pluginData._pluginType.config.invite_expire_time)!;
+    pollPeriod /= 1000;
+    if (pollPeriod > 7 * INVITE_AGE) pollPeriod = 0;
+    if (pollPeriod < 0) pollPeriod = 0;
+
     const r = await fetch(`${RouteBases.api}${Routes.channelInvites(channel.id)}`, {
       method: 'POST',
       headers: {
@@ -52,7 +62,8 @@ export const ActivitiesCmd = activitiesCmd({
         'content-type': 'application/json'
       },
       body: JSON.stringify({
-        max_age: 0,
+        max_age: pollPeriod, // Exp time in seconds
+        temporary: config.temporary_membership, // Play with users outside the servers without needing to kick afterwards
         target_type: InviteTargetType.EmbeddedApplication,
         target_application_id: activities[args.activity.toLowerCase()],
       } as RESTPostAPIChannelInviteJSONBody)
