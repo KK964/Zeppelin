@@ -25,7 +25,7 @@ export const ListDashboardPermsCmd = botControlCmd({
     if (args.guildId) {
       guild = await pluginData.state.allowedGuilds.find(args.guildId);
       if (!guild) {
-        sendErrorMessage(pluginData, msg.channel as TextChannel, "Server is not using Zeppelin");
+        sendErrorMessage(pluginData, msg.channel as TextChannel, "Server is not using TBH Manager");
         return;
       }
     }

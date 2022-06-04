@@ -9,6 +9,7 @@ export const pluginInfo: ZeppelinGuildPluginBlueprint["info"] = {
   configurationGuide: trimPluginDescription(`
     ### Getting started
     To get started, request an API key for Phisherman following the instructions at https://docs.phisherman.gg/guide/getting-started.html#requesting-api-access
+    When requesting an api token: state that it is a self hosted instance of Zeppelin.
     Then, add the api key to the plugin's config:
     
     ~~~yml
@@ -18,7 +19,7 @@ export const pluginInfo: ZeppelinGuildPluginBlueprint["info"] = {
     ~~~
     
     ### Note
-    When using Phisherman features in Zeppelin, Zeppelin reports statistics about checked links back to Phisherman. This only includes the domain (e.g. zeppelin.gg), not the full link.
+    When using Phisherman features in TBH Manager, TBH Manager reports statistics about checked links back to Phisherman. This only includes the domain (e.g. zeppelin.gg), not the full link.
     
     ### Usage with Automod
     Once you have configured the Phisherman plugin, you are ready to use it with automod. Currently, Phisherman is available as an option in the \`match_links\` plugin:

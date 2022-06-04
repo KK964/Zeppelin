@@ -11,7 +11,7 @@ import { shuffle } from "lodash";
 
 export const AboutCmd = utilityCmd({
   trigger: "about",
-  description: "Show information about Zeppelin's status on the server",
+  description: "Show information about TBH Manager's status on the server",
   permission: "can_about",
 
   async run({ message: msg, pluginData }) {
@@ -87,9 +87,9 @@ export const AboutCmd = utilityCmd({
         .join(" ");
 
       aboutContent.embeds![0].fields!.push({
-        name: "Zeppelin supporters 🎉",
+        name: "TBH Manager supporters 🎉",
         value:
-          "These amazing people have supported Zeppelin development by pledging on [Patreon](https://www.patreon.com/zeppelinbot):\n\n" +
+          "These amazing people have supported TBH Manager development by pledging on [Patreon](https://www.patreon.com/zeppelinbot):\n\n" +
           formattedSupporters,
         inline: false,
       });

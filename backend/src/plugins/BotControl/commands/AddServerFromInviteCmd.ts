@@ -59,7 +59,7 @@ export const AddServerFromInviteCmd = botControlCmd({
     sendSuccessMessage(
       pluginData,
       msg.channel as TextChannel,
-      "Server was eligible and is now allowed to use Zeppelin!",
+      "Server was eligible and is now allowed to use TBH Manager!",
     );
   },
 });

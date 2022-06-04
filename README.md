@@ -1,6 +1,6 @@
-![Zeppelin Banner](assets/zepbanner.png)
-# Zeppelin
-Zeppelin is a moderation bot for Discord, designed with large servers and reliability in mind.
+![TBH Manager Banner](assets/zepbanner.png)
+# TBH Manager
+TBH Manager is a moderation bot for Discord, designed with large servers and reliability in mind.
 
 **Main features include:**
 - Extensive automoderator features (automod)

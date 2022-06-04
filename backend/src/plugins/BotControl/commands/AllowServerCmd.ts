@@ -52,6 +52,6 @@ export const AllowServerCmd = botControlCmd({
       );
     }
 
-    sendSuccessMessage(pluginData, msg.channel as TextChannel, "Server is now allowed to use Zeppelin!");
+    sendSuccessMessage(pluginData, msg.channel as TextChannel, "Server is now allowed to use TBH Manager!");
   },
 });

@@ -3,7 +3,7 @@
     <h1>Import / Export</h1>
     <p>
       <strong>Note!</strong>
-      This feature is currently experimental. Make sure to always export a backup before importing server data. If you encounter any issues, please report them on the [Zeppelin Discord server](https://discord.gg/zeppelin).
+      This feature is currently experimental. Make sure to always export a backup before importing server data. If you encounter any issues, please report them on the [TBH Discord server](https://discord.gg/wxnbTPm9sA).
     </p>
 
     <h2>Export server data</h2>

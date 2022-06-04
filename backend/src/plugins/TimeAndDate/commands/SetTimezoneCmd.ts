@@ -21,7 +21,7 @@ export const SetTimezoneCmd = timeAndDateCmd({
         message.channel,
         trimLines(`
         Invalid timezone: \`${Util.escapeInlineCode(args.timezone)}\`
-        Zeppelin uses timezone locations rather than specific timezone names.
+        TBH Manager uses timezone locations rather than specific timezone names.
         See the **TZ database name** column at <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones> for a list of valid options.
       `),
       );
