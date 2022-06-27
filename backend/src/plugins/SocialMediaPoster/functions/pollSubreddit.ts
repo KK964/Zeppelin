@@ -40,7 +40,6 @@ export async function pollSubreddit(
     redditJson = await redditResponse.json();
     if (!redditJson) return;
   } catch (err) {
-    subreddit.enabled = false;
     const logs = pluginData.getPlugin(LogsPlugin);
     logs.logBotAlert({
       body: `Unable to poll from r/**${subredditName}**.\nPolling will be disabled for this subreddit until a config change is made.`,
